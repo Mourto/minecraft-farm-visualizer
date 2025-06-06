@@ -1,0 +1,109 @@
+Portal Spawning
+x320 Glass
+x596 Obsidian
+x584 Smooth stone (Building Blocks)
+Temp Blocks
+
+Cell List
+x1372 Glass
+x392 Scaffolding
+x308 Leaves
+x252 Building Blocks
+x280 Trapdoors
+x252 Observers
+x224 Powered Rails
+x196 Redstone Repeaters
+x196 Sticky Pistons
+x56  Pistons
+x56  Obsidian
+x56  Redstone Blocks
+x84  Slime Blocks
+x84  Beds
+x112 Buttons
+x112 Slabs
+x28  walls
+x28  Redstone Comparators
+x28  Redstone Dust
+x28  Vines
+
+Dropper Selector line
+x88 Powered Rails
+x80 Glass
+x72 Droppers
+x24 Hoppers
+x36 Observers
+x8 Building Blocks
+x24 Composters
+x4 Noteblocks
+x92 Slabs
+Temp 
+
+Clock MAXI
+x47 Glass
+x36 Powered Rails
+x7 Slabs
+x6 Building Blocks
+x7 Observers
+x5 Sticky Pistons
+x4 Comparators
+x4 Redstone Dust
+x4 Hoppers
+x2 Redstone BLocks
+x2 Composters
+x2 Noteblocks
+x1 Piston
+x1 Lever
+x13 Junk Items
+Temp
+
+Cell Chunk loading system
+x45 Glass
+x31 Slabs
+x11 Leaves
+x20 Obsidian
+x9 Scaffolding
+x9 Redstone Dust
+x8 Building Blocks
+x6 Observers
+x5 Repeaters
+x4 Sticky Pistons
+x3 Signs
+x3 Pistons
+x3 Slime Blocks
+x3 Trapdoors
+x2 Fences
+x2 Packed Ice
+x2 Comparators
+x2 Tripwire Hooks
+x2 Redstone Torches
+x1 Noteblock
+x1 Lava Bucket
+x1 String
+x2 Boats
+x16 eggs
+x1 Flint and Steel
+Temp blocks
+
+
+
+Total Base Materials
+Sand: 1864
+Obsidian: 672
+Cobblestone: 5195
+Bamboo: 401
+String: 67 and 5/6 (407/6)
+Leaves: 319
+Planks: 2287 and 2/3 (6863/3)
+Redstone Dust: 2274
+Nether Quartz: 335
+Gold Ingots: 348
+Sticks: 563 and 1/3 (1690/3)
+Iron Ingots: 411
+Slimeballs: 988
+Wool: 252
+Vines: 28
+Junk Items: 13
+Packed Ice: 2
+Lava (unit): 1
+Eggs: 16
+Flint: 1

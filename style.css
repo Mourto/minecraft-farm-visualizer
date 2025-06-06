@@ -1,0 +1,73 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #5a8b3c; /* Minecraft green */
+}
+
+#farm-graph {
+    width: 100%;
+    height: auto;
+    min-height: 600px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.node circle {
+    cursor: pointer;
+    stroke: #333;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font-size: 12px;
+    pointer-events: none; /* Allow click through text to circle */
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.link {
+    fill: none;
+    stroke: #999;
+    stroke-opacity: 0.6;
+    stroke-width: 1.5px;
+}
+
+/* Node colors by type */
+.node.section circle {
+    fill: #8dd3c7; /* Light teal for sections */
+}
+
+.node.item circle {
+    fill: #ffffb3; /* Light yellow for items */
+}
+
+.node.material circle {
+    fill: #bebada; /* Light purple for base materials */
+}
+
+.node.component circle {
+    fill: #fb8072; /* Light red for intermediate components */
+}
+
+/* Tooltip (optional, for showing quantities or details on hover) */
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
