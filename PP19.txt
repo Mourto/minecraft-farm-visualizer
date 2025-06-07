@@ -1,109 +1,211 @@
-Portal Spawning
-x320 Glass
-x596 Obsidian
-x584 Smooth stone (Building Blocks)
-Temp Blocks
 
-Cell List
-x1372 Glass
-x392 Scaffolding
-x308 Leaves
-x252 Building Blocks
-x280 Trapdoors
-x252 Observers
-x224 Powered Rails
-x196 Redstone Repeaters
-x196 Sticky Pistons
-x56  Pistons
-x56  Obsidian
-x56  Redstone Blocks
-x84  Slime Blocks
-x84  Beds
-x112 Buttons
-x112 Slabs
-x28  walls
-x28  Redstone Comparators
-x28  Redstone Dust
-x28  Vines
+Iron Farm
+└── Portal Spawning
+    ├── Glass (x320)
+    │   └── Sand (x320)
+    ├── Obsidian (x596)
+    └── Smooth stone (Building Blocks) (x584)
+        └── Cobblestone (x584)
 
-Dropper Selector line
-x88 Powered Rails
-x80 Glass
-x72 Droppers
-x24 Hoppers
-x36 Observers
-x8 Building Blocks
-x24 Composters
-x4 Noteblocks
-x92 Slabs
-Temp 
+└── Cell List
+    ├── Glass (x1372)
+    │   └── Sand (x1372)
+    ├── Scaffolding (x392)
+    │   ├── Bamboo (x392)
+    │   └── String (x65.33)  (approx. 392/6)
+    ├── Leaves (x308)
+    ├── Building Blocks (x252) (assumed Smooth Stone)
+    │   └── Cobblestone (x252)
+    ├── Trapdoors (x280) (assumed Wooden)
+    │   └── Planks (x840) (280 * 3)
+    ├── Observers (x252)
+    │   ├── Cobblestone (x1512) (252 * 6)
+    │   ├── Redstone Dust (x504) (252 * 2)
+    │   └── Nether Quartz (x252) (252 * 1)
+    ├── Powered Rails (x224)
+    │   ├── Gold Ingots (x224)
+    │   ├── Sticks (x37.33) (approx. 224/6)
+    │   └── Redstone Dust (x37.33) (approx. 224/6)
+    ├── Redstone Repeaters (x196)
+    │   ├── Cobblestone (x588) (196 * 3)
+    │   ├── Sticks (x392) (196 * 2 for torches)
+    │   └── Redstone Dust (x588) (196 * 1 + 196 * 2 for torches)
+    ├── Sticky Pistons (x196)
+    │   ├── Planks (x588) (196 * 3)
+    │   ├── Cobblestone (x784) (196 * 4)
+    │   ├── Iron Ingots (x196)
+    │   ├── Redstone Dust (x196)
+    │   └── Slimeballs (x196)
+    ├── Pistons (x56)
+    │   ├── Planks (x168) (56 * 3)
+    │   ├── Cobblestone (x224) (56 * 4)
+    │   ├── Iron Ingots (x56)
+    │   └── Redstone Dust (x56)
+    ├── Obsidian (x56)
+    ├── Redstone Blocks (x56)
+    │   └── Redstone Dust (x504) (56 * 9)
+    ├── Slime Blocks (x84)
+    │   └── Slimeballs (x756) (84 * 9)
+    ├── Beds (x84)
+    │   ├── Wool (x252) (84 * 3)
+    │   └── Planks (x252) (84 * 3)
+    ├── Buttons (x112) (assumed Stone)
+    │   └── Cobblestone (x112)
+    ├── Slabs (x112) (assumed Stone)
+    │   └── Cobblestone (x56) (112 * 0.5)
+    ├── walls (x28) (assumed Cobblestone)
+    │   └── Cobblestone (x28)
+    ├── Redstone Comparators (x28)
+    │   ├── Cobblestone (x84) (28 * 3)
+    │   ├── Redstone Torches (x84) -> Sticks (x84), Redstone Dust (x84)
+    │   ├── Nether Quartz (x28)
+    │   Simplified:
+    │   ├── Cobblestone (x84)
+    │   ├── Sticks (x84)
+    │   ├── Redstone Dust (x84)
+    │   └── Nether Quartz (x28)
+    ├── Redstone Dust (x28)
+    └── Vines (x28)
 
-Clock MAXI
-x47 Glass
-x36 Powered Rails
-x7 Slabs
-x6 Building Blocks
-x7 Observers
-x5 Sticky Pistons
-x4 Comparators
-x4 Redstone Dust
-x4 Hoppers
-x2 Redstone BLocks
-x2 Composters
-x2 Noteblocks
-x1 Piston
-x1 Lever
-x13 Junk Items
-Temp
+└── Dropper Selector line
+    ├── Powered Rails (x88)
+    │   ├── Gold Ingots (x88)
+    │   ├── Sticks (x14.67) (approx. 88/6)
+    │   └── Redstone Dust (x14.67) (approx. 88/6)
+    ├── Glass (x80)
+    │   └── Sand (x80)
+    ├── Droppers (x72)
+    │   ├── Cobblestone (x504) (72 * 7)
+    │   └── Redstone Dust (x72)
+    ├── Hoppers (x24)
+    │   ├── Iron Ingots (x120) (24 * 5)
+    │   └── Planks (x192) (24 * 8 for chest)
+    ├── Observers (x36)
+    │   ├── Cobblestone (x216) (36 * 6)
+    │   ├── Redstone Dust (x72) (36 * 2)
+    │   └── Nether Quartz (x36)
+    ├── Building Blocks (x8) (assumed Smooth Stone)
+    │   └── Cobblestone (x8)
+    ├── Composters (x24)
+    │   └── Planks (x84) (24 * 3.5)
+    ├── Noteblocks (x4)
+    │   ├── Planks (x32) (4 * 8)
+    │   └── Redstone Dust (x4)
+    └── Slabs (x92) (assumed Stone)
+        └── Cobblestone (x46) (92 * 0.5)
 
-Cell Chunk loading system
-x45 Glass
-x31 Slabs
-x11 Leaves
-x20 Obsidian
-x9 Scaffolding
-x9 Redstone Dust
-x8 Building Blocks
-x6 Observers
-x5 Repeaters
-x4 Sticky Pistons
-x3 Signs
-x3 Pistons
-x3 Slime Blocks
-x3 Trapdoors
-x2 Fences
-x2 Packed Ice
-x2 Comparators
-x2 Tripwire Hooks
-x2 Redstone Torches
-x1 Noteblock
-x1 Lava Bucket
-x1 String
-x2 Boats
-x16 eggs
-x1 Flint and Steel
-Temp blocks
+└── Clock MAXI
+    ├── Glass (x47)
+    │   └── Sand (x47)
+    ├── Powered Rails (x36)
+    │   ├── Gold Ingots (x36)
+    │   ├── Sticks (x6)
+    │   └── Redstone Dust (x6)
+    ├── Slabs (x7) (assumed Stone)
+    │   └── Cobblestone (x3.5)
+    ├── Building Blocks (x6) (assumed Smooth Stone)
+    │   └── Cobblestone (x6)
+    ├── Observers (x7)
+    │   ├── Cobblestone (x42) (7 * 6)
+    │   ├── Redstone Dust (x14) (7 * 2)
+    │   └── Nether Quartz (x7)
+    ├── Sticky Pistons (x5)
+    │   ├── Planks (x15) (5 * 3)
+    │   ├── Cobblestone (x20) (5 * 4)
+    │   ├── Iron Ingots (x5)
+    │   ├── Redstone Dust (x5)
+    │   └── Slimeballs (x5)
+    ├── Comparators (x4)
+    │   ├── Cobblestone (x12) (4 * 3)
+    │   ├── Sticks (x12)
+    │   ├── Redstone Dust (x12)
+    │   └── Nether Quartz (x4)
+    ├── Redstone Dust (x4)
+    ├── Hoppers (x4)
+    │   ├── Iron Ingots (x20) (4 * 5)
+    │   └── Planks (x32) (4 * 8 for chest)
+    ├── Redstone BLocks (x2)
+    │   └── Redstone Dust (x18) (2 * 9)
+    ├── Composters (x2)
+    │   └── Planks (x7) (2 * 3.5)
+    ├── Noteblocks (x2)
+    │   ├── Planks (x16) (2 * 8)
+    │   └── Redstone Dust (x2)
+    ├── Piston (x1)
+    │   ├── Planks (x3)
+    │   ├── Cobblestone (x4)
+    │   ├── Iron Ingots (x1)
+    │   └── Redstone Dust (x1)
+    ├── Lever (x1)
+    │   ├── Cobblestone (x1)
+    │   └── Sticks (x1)
+    └── Junk Items (x13)
 
-
-
-Total Base Materials
-Sand: 1864
-Obsidian: 672
-Cobblestone: 5195
-Bamboo: 401
-String: 67 and 5/6 (407/6)
-Leaves: 319
-Planks: 2287 and 2/3 (6863/3)
-Redstone Dust: 2274
-Nether Quartz: 335
-Gold Ingots: 348
-Sticks: 563 and 1/3 (1690/3)
-Iron Ingots: 411
-Slimeballs: 988
-Wool: 252
-Vines: 28
-Junk Items: 13
-Packed Ice: 2
-Lava (unit): 1
-Eggs: 16
-Flint: 1
+└── Cell Chunk loading system
+    ├── Glass (x45)
+    │   └── Sand (x45)
+    ├── Slabs (x31) (assumed Stone)
+    │   └── Cobblestone (x15.5)
+    ├── Leaves (x11)
+    ├── Obsidian (x20)
+    ├── Scaffolding (x9)
+    │   ├── Bamboo (x9)
+    │   └── String (x1.5)
+    ├── Redstone Dust (x9)
+    ├── Building Blocks (x8) (assumed Smooth Stone)
+    │   └── Cobblestone (x8)
+    ├── Observers (x6)
+    │   ├── Cobblestone (x36) (6 * 6)
+    │   ├── Redstone Dust (x12) (6 * 2)
+    │   └── Nether Quartz (x6)
+    ├── Repeaters (x5)
+    │   ├── Cobblestone (x15) (5 * 3)
+    │   ├── Sticks (x10)
+    │   └── Redstone Dust (x15)
+    ├── Sticky Pistons (x4)
+    │   ├── Planks (x12) (4 * 3)
+    │   ├── Cobblestone (x16) (4 * 4)
+    │   ├── Iron Ingots (x4)
+    │   ├── Redstone Dust (x4)
+    │   └── Slimeballs (x4)
+    ├── Signs (x3) (assumed Wooden)
+    │   ├── Planks (x6) (3 * 2)
+    │   └── Sticks (x1) (3 * 1/3)
+    ├── Pistons (x3)
+    │   ├── Planks (x9) (3 * 3)
+    │   ├── Cobblestone (x12) (3 * 4)
+    │   ├── Iron Ingots (x3)
+    │   └── Redstone Dust (x3)
+    ├── Slime Blocks (x3)
+    │   └── Slimeballs (x27) (3 * 9)
+    ├── Trapdoors (x3) (assumed Wooden)
+    │   └── Planks (x9) (3 * 3)
+    ├── Fences (x2) (assumed Wooden)
+    │   ├── Planks (x2.67) (approx. 2 * 4/3)
+    │   └── Sticks (x1.33) (approx. 2 * 2/3)
+    ├── Packed Ice (x2)
+    ├── Comparators (x2)
+    │   ├── Cobblestone (x6) (2 * 3)
+    │   ├── Sticks (x6)
+    │   ├── Redstone Dust (x6)
+    │   └── Nether Quartz (x2)
+    ├── Tripwire Hooks (x2)
+    │   ├── Iron Ingots (x2)
+    │   ├── Sticks (x2)
+    │   └── Planks (x2)
+    ├── Redstone Torches (x2)
+    │   ├── Sticks (x2)
+    │   └── Redstone Dust (x2)
+    ├── Noteblock (x1)
+    │   ├── Planks (x8)
+    │   └── Redstone Dust (x1)
+    ├── Lava Bucket (x1)
+    │   ├── Iron Ingots (x3) (for bucket)
+    │   └── Lava (x1 unit)
+    ├── String (x1)
+    ├── Boats (x2) (assumed Wooden)
+    │   └── Planks (x10) (2 * 5)
+    ├── eggs (x16)
+    └── Flint and Steel (x1)
+        ├── Iron Ingots (x1)
+        └── Flint (x1)
