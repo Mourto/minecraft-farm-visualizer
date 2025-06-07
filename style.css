@@ -281,3 +281,54 @@ h1 {
     border-radius: 0; 
     box-shadow: 5px 5px #543D1F; /* Brown shadow */
 }
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Slightly smaller base font for mobile */
+    }
+
+    h1 {
+        font-size: 32px; /* Smaller heading for mobile */
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #tab-container {
+        margin-bottom: 15px;
+    }
+
+    .tab-button {
+        font-size: 16px; /* Smaller tab buttons */
+        padding: 8px 12px;
+        margin: 0 3px;
+    }
+
+    #main-content-area {
+        flex-direction: column; /* Stack columns vertically */
+        margin-top: 15px;
+    }
+
+    #left-column {
+        width: 100%; /* Make left column full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add some space below it before the graph */
+        gap: 15px; /* Reduce gap for mobile */
+    }
+
+    #graph-column {
+        width: 100%; /* Make graph column full width */
+    }
+
+    #tree-view-container,
+    #materials-summary-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+        /* min-height will be determined by content or flex properties */
+    }
+    
+    /* Ensure graph SVG scales reasonably, might need script adjustments too for optimal view */
+    #farm-graph-container svg {
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+}
