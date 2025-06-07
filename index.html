@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Minecraft Iron Farm Material Breakdown</h1>
-    <div id="farm-graph"></div>
-
+    <h1>Minecraft Farm Material Breakdown</h1>
+    <div id="tab-container">
+        <!-- Tabs will be dynamically inserted here -->
+    </div>
+    <div id="main-content-area">
+        <div id="left-column">
+            <div id="tree-view-container">
+                <!-- Tree view will be populated here by script.js -->
+            </div>
+            <div id="materials-summary-container">
+                <!-- Total basic materials will be populated here -->
+            </div>
+        </div>
+        <div class="column" id="graph-column">
+            <div id="farm-graph-container">
+                <svg id="farm-graph"></svg>
+            </div>
+        </div>
+    </div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="data.js"></script>
     <script src="script.js"></script>

@@ -1,73 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Minecraft-like pixel font */
+
 body {
-    font-family: sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'VT323', monospace; /* Minecraft-like font */
+    margin: 0;
+    /* background-color: #3E3E3E; */ /* Dark stone/dirt color */
+    background-color: #8B5A2B; /* Rich soil/dirt brown */
+    /* color: #FFFFFF; */
+    color: #E0E0E0; /* Light gray text, easier on eyes than pure white */
+    font-size: 18px; 
 }
 
 h1 {
     text-align: center;
-    color: #5a8b3c; /* Minecraft green */
+    /* color: #FFAA00; */ /* Gold color */
+    color: #7CFC00; /* Bright green, like fresh crops/grass */
+    font-size: 48px; 
+    /* text-shadow: 2px 2px #3E3E3E, 4px 4px #000000; */
+    text-shadow: 2px 2px #543D1F, 4px 4px #3A2A15; /* Darker brown shadow */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#farm-graph {
-    width: 100%;
-    height: auto;
-    min-height: 600px; /* Adjust as needed */
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#tab-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    /* background-color: #707070; */ /* Stone gray */
+    background-color: #A0522D; /* Sienna/light wood color */
+    color: #FFFFFF; 
+    /* border: 2px solid #3E3E3E; */
+    border: 2px solid #6F391B; /* Darker wood border */
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 20px; 
+    border-radius: 0; 
+    transition: background-color 0.2s, color 0.2s;
+    /* box-shadow: 2px 2px #303030; */
+    box-shadow: 2px 2px #543D1F; /* Brown shadow */
+}
+
+.tab-button:hover {
+    /* background-color: #8A8A8A; */
+    background-color: #B86A3D; /* Lighter wood on hover */
+    /* border-color: #4A4A4A; */
+    border-color: #804C28;
+}
+
+.tab-button.active {
+    /* background-color: #529C32; */ /* Minecraft grass green */
+    background-color: #55AE3A; /* Brighter, more vibrant grass green */
+    color: #FFFFFF; 
+    /* border-bottom: 2px solid #529C32; */
+    border-bottom: 2px solid #3F802B; /* Darker grass green */
+    box-shadow: none; 
+}
+
+#main-content-area {
+    display: flex;
+    margin-top: 20px;
+}
+
+#left-column {
+    width: 25%; 
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+#graph-column {
+    flex: 1; /* Allows this column to take up the remaining horizontal space */
+    display: flex; /* Use flex to manage its children, e.g., farm-graph-container */
+    flex-direction: column;
+}
+
+#tree-view-container {
+    flex: 1; 
+    min-height: 0; 
+    overflow-y: auto;
+    /* border: 4px solid #A0A0A0; */
+    border: 4px solid #6F391B; /* Wood border */
+    /* background-color: #707070; */
+    background-color: #D2B48C; /* Tan / dry soil / wooden plank color */
+    /* color: #FFFFFF; */
+    color: #4A3B31; /* Dark brown text for readability on tan */
+    padding: 15px;
+    border-radius: 0; 
+    /* box-shadow: 3px 3px #2E2E2E; */
+    box-shadow: 3px 3px #543D1F; /* Brown shadow */
+}
+
+#materials-summary-container {
+    flex: 1; 
+    min-height: 0; 
+    overflow-y: auto;
+    /* border: 4px solid #A0A0A0; */
+    border: 4px solid #6F391B; /* Wood border */
+    /* background-color: #707070; */
+    background-color: #D2B48C; /* Tan / dry soil / wooden plank color */
+    /* color: #FFFFFF; */
+    color: #4A3B31; /* Dark brown text for readability on tan */
+    padding: 15px;
+    border-radius: 0; 
+    /* box-shadow: 3px 3px #2E2E2E; */
+    box-shadow: 3px 3px #543D1F; /* Brown shadow */
+}
+
+#materials-summary-container h3 {
+    margin-top: 0;
+    font-size: 22px; 
+    /* color: #FFAA00; */
+    color: #8B4513; /* SaddleBrown, like tilled earth or wood */
+    /* border-bottom: 2px solid #A0A0A0; */
+    border-bottom: 2px solid #8B5A2B; /* Dirt brown border */
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+#materials-summary-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#materials-summary-container li {
+    font-size: 18px; 
+    padding: 4px 0;
+    /* color: #DDDDDD; */
+    color: #5A4D41; /* Darker brown for list items */
 }
 
 .node circle {
     cursor: pointer;
-    stroke: #333;
-    stroke-width: 1.5px;
+    /* stroke: #2E2E2E; */
+    stroke: #543D1F; /* Dark brown stroke for nodes */
+    stroke-width: 2px; 
 }
 
 .node text {
-    font-size: 12px;
-    pointer-events: none; /* Allow click through text to circle */
+    font-size: 16px; 
+    font-family: 'VT323', monospace; 
+    pointer-events: none; 
     text-anchor: middle;
     dominant-baseline: central;
+    fill: #000000; /* Black text for better contrast */
+    stroke: none; /* Remove stroke for crispness */
+    /* stroke: #FFFFFF; */ /* White stroke for readability on colored nodes */
+    /* stroke-width: 0.6px; */ /* Thinner stroke, but helps with contrast */
 }
 
 .link {
     fill: none;
-    stroke: #999;
-    stroke-opacity: 0.6;
-    stroke-width: 1.5px;
+    /* stroke: #A0A0A0; */
+    stroke: #87CEEB; /* Lighter sky blue, or a water-like blue for links */
+    stroke-opacity: 0.8; /* Slightly more opaque */
+    stroke-width: 2.5px; 
 }
 
-/* Node colors by type */
+/* Node colors by type - Agricultural theme */
+.node.root circle {
+    /* fill: #76A84F; */ /* Grass block green */
+    fill: #6B8E23; /* OliveDrab, like mature crops or a field */
+}
 .node.section circle {
-    fill: #8dd3c7; /* Light teal for sections */
+    /* fill: #B08058; */ /* Dirt brown */
+    fill: #CD853F; /* Peru, like tilled soil or wooden structures */
 }
-
 .node.item circle {
-    fill: #ffffb3; /* Light yellow for items */
+    /* fill: #D0D0D0; */ /* Stone gray */
+    fill: #F5DEB3; /* Wheat color for items */
 }
-
 .node.material circle {
-    fill: #bebada; /* Light purple for base materials */
+    /* fill: #FFCC00; */ /* Gold/yellow for valuable materials */
+    fill: #FF7F50; /* Coral, like carrots or pumpkins */
+}
+.node.component circle { 
+    /* fill: #A0A0A0; */
+    fill: #BDB76B; /* DarkKhaki, like hay bales or bundled resources */
 }
 
-.node.component circle {
-    fill: #fb8072; /* Light red for intermediate components */
-}
-
-/* Tooltip (optional, for showing quantities or details on hover) */
+/* Tooltip */
 .tooltip {
     position: absolute;
     text-align: center;
     width: auto;
     height: auto;
     padding: 8px;
-    font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 0px;
-    border-radius: 8px;
+    font: 12px sans-serif; /* Keep smaller for tooltip */
+    font-family: 'VT323', monospace; 
+    /* background: #4E4E4E; */
+    background: #C2B280; /* Light Khaki / Burlap sack color */
+    /* color: #FFFFFF; */
+    color: #3A2A15; /* Dark brown text for tooltip */
+    /* border: 2px solid #2E2E2E; */
+    border: 2px solid #8B5A2B; /* Dirt brown border */
+    border-radius: 0; 
     pointer-events: none;
     opacity: 0;
+}
+
+.tree-node {
+    padding: 3px 0 3px 20px; 
+    cursor: pointer;
+    font-size: 18px; 
+}
+
+.tree-node:hover {
+    /* background-color: #5E5E5E; */
+    background-color: #C19A6B; /* Slightly darker tan/wood on hover */
+}
+
+.tree-node.collapsed > .children {
+    display: none;
+}
+
+.tree-node.expanded > .toggler::before {
+    content: "▼ "; 
+    /* color: #FFAA00; */
+    color: #228B22; /* ForestGreen toggler */
+}
+
+.tree-node.collapsed > .toggler::before {
+    content: "► "; 
+    /* color: #FFAA00; */
+    color: #228B22; /* ForestGreen toggler */
+}
+
+.tree-node .name {
+    font-weight: normal; 
+}
+
+.tree-node .quantity {
+    font-style: normal; 
+    /* color: #CCCCCC; */
+    color: #70543E; /* Darker brown for quantity text */
+}
+
+/* Style for the UL elements in the tree view */
+.tree-root, .tree-node ul.children {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+.tree-node ul.children li {
+    padding-left: 20px; 
+    position: relative;
+}
+
+/* Optional: Add "connecting lines" to tree view */
+.tree-node ul.children li::before {
+    content: "";
+    position: absolute;
+    left: 5px; 
+    top: -8px; 
+    bottom: 8px; 
+    width: 10px; 
+    /* border-left: 2px solid #A0A0A0; */
+    border-left: 2px solid #8B5A2B; /* Dirt brown lines */
+    /* border-bottom: 2px solid #A0A0A0; */
+    border-bottom: 2px solid #8B5A2B; /* Dirt brown lines */
+    border-bottom-left-radius: 0px; 
+}
+
+.tree-node ul.children li:last-child::before {
+    height: 17px; 
+    bottom: auto;
+}
+
+#farm-graph-container {
+    width: 100%;
+    height: 100%;
+    position: relative; /* For positioning controls */
+    /* Styles for the graph background panel - these were previously in #graph-container */
+    min-height: 600px; 
+    border: 4px solid #6F391B; /* Wood border */
+    background-color: #ADEEEE; /* Light sky blue, like a clear day */
+    border-radius: 0; 
+    box-shadow: 5px 5px #543D1F; /* Brown shadow */
 }
